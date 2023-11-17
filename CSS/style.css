@@ -11,9 +11,11 @@
 
 :root {
     --bg: #222222;
-    --textcolor: #FCF5E5;
+    /* --textcolor: #FCF5E5; */
+    --textcolor: #fff;
     --primarycolor: #fff;
     --accentcolor: #acceb0;
+    /* --accentcolor: #A6E3E9; */
 }
 
 
@@ -45,6 +47,30 @@ nav ul {
     align-items: center;
     justify-content: right;
     gap: 1rem;
+}
+
+#logo {
+    animation: textcolor infinite 3s;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 32px rgb(242, 255, 0), 0 0 42px rgb(242, 255, 0);
+}
+
+@keyframes textcolor {
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+#logo:hover {
+    opacity: 1;
+    animation: none;
 }
 
 nav a {
@@ -114,6 +140,8 @@ nav span {
 body {
     background-color: var(--bg);
     font-family: 'Courier New', Courier, monospace;
+    background-image: url(/svg/bg.svg);
+    /* backdrop-filter: blur(5px); */
 }
 
 section {
@@ -176,7 +204,7 @@ section {
     align-items: center;
     width: 100%;
     gap: 4rem;
-    padding: 2rem;
+    padding: 0 2rem;
     transition: 400ms;
 }
 
@@ -224,6 +252,8 @@ section {
 .workRow2Col2 img {
     width: 100%;
     aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: top;
 }
 
 .workRow3 {
@@ -278,7 +308,7 @@ section {
     width: 30%;
 }
 
-.expRow1 a{
+.expRow1 a {
     transition: 400ms;
 }
 
@@ -310,7 +340,7 @@ footer {
     width: 40px;
 }
 
-.svg-icons a img{
+.svg-icons a img {
     transition: 400ms;
 }
 
@@ -361,6 +391,7 @@ footer {
     .hero-section {
         padding: 2rem;
         width: 100%;
+        gap: 2rem;
     }
 
     #heading1 {
@@ -392,13 +423,18 @@ footer {
     .workRow1Col2,
     .workRow2Col1,
     .workRow2Col2,
-    .workRow3Col1,
-    .workRow3Col2,
+
     .expRow1col1,
     .expRow1col2,
     .expRow1col3 {
         width: 100%;
-        margin: 1rem 0;
+        margin: 2rem 0;
+    }
+
+    .workRow3Col1,
+    .workRow3Col2 {
+        width: 100%;
+        margin: 1rem 0 0 0;
     }
 
     .hidden-div {
