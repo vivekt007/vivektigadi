@@ -366,7 +366,7 @@ footer {
 
     #logo {
         animation: textcolor infinite 3s;
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 16px rgb(242, 255, 0), 0 0 21px rgb(242, 255, 0);
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 16px rgb(242, 255, 0);
     }
 
     nav {
