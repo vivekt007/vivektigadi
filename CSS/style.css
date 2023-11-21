@@ -316,6 +316,48 @@ section {
     color: var(--accentcolor);
 }
 
+
+/* About section */
+
+#myself {
+    height: 100dvh;
+    width: 100%;
+}
+
+.myRow1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 100%;
+    width: 100%;
+    gap: 1rem;
+}
+
+.myRow1Col1 {
+    margin-top: 2rem;
+    width: 60%;
+    /* background-color: #acceb0; */
+}
+
+.myRow1Col1 p {
+    font-size: 1.6rem;
+}
+
+.myRow1Col2 {
+    margin-top: 2rem;
+    height: 80%;
+    width: 40%;
+    /* background-color: #acceb0; */
+}
+
+.myRow1Col2 img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 8px;
+}
+
 /* footer */
 
 footer {
@@ -415,7 +457,8 @@ footer {
     .workRow1,
     .workRow2,
     .workRow3,
-    .expRow1 {
+    .expRow1,
+    .myRow1 {
         display: block;
         width: 100%;
         padding: 0rem;
@@ -429,7 +472,6 @@ footer {
     .workRow1Col2,
     .workRow2Col1,
     .workRow2Col2,
-
     .expRow1col1,
     .expRow1col2,
     .expRow1col3 {
@@ -449,6 +491,26 @@ footer {
 
     #exp {
         padding: 0 2rem;
+    }
+
+    /* media about */
+
+    #myself {
+        padding-top: 6rem;
+    }
+
+    .myRow1Col1,
+    .myRow1Col2 {
+        display: block;
+        width: 100%;
+        /* margin: 2rem; */
+        padding: 0 2rem;
+        height: fit-content;
+        /* background-color: #222222; */
+    }
+
+    .myRow1Col1 p {
+        font-size: 1.2rem;
     }
 
     /* media footer */
