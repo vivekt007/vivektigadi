@@ -140,7 +140,7 @@ nav span {
 body {
     background-color: var(--bg);
     font-family: 'Courier New', Courier, monospace;
-    background-image: url(svg/bg.svg);
+    background-image: url(../svg/bg.svg);
     /* backdrop-filter: blur(5px); */
 }
 
