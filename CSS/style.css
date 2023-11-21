@@ -140,10 +140,11 @@ nav span {
 body {
     /* background-color: var(--bg); */
     font-family: 'Courier New', Courier, monospace;
-    /* background-image: url(../svg/bg.svg); */
-    /* backdrop-filter: blur(5px); */
-    background: url(/svg/bg.svg);
-    background-repeat: no-repeat;
+    background-image: url(../svg/bg.svg);
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
 }
 
 section {
