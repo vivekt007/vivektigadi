@@ -1,0 +1,14 @@
+@import url("../src/styles/Variables.css");
+
+* {
+    font-family: "spaceMonoRegular";
+    color: var(--color-moon-white);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-display: swap;
+    scroll-padding: 100px;
+}

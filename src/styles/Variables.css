@@ -1,0 +1,89 @@
+:root {
+    --color-pure-black: #000000;
+    --color-pure-white: #ffffff;
+    --color-blackout: #070707;
+    --color-moon-white: #f8f8f8;
+    --color-light-carbon: #cdcdcd;
+    --color-medium-carbon: #878787;
+    --color-dark-carbon: #575757;
+    --color-sunset-orange: #fa4616;
+    --color-link: #47b7f8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-display: swap;
+    font-family: "spaceMonoRegular";
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.hidden {
+    opacity: 0;
+    transition: 0.5s;
+    filter: blur(5px);
+    transform: translateX(100%);
+}
+
+.blur {
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+    top: 0;
+}
+
+section {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "spaceMonoRegular";
+    src: url("/spaceMono/SpaceMono-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: Regular;
+}
+
+@font-face {
+    font-family: "spaceMonoBold";
+    src: url("/spaceMono/SpaceMono-Bold.ttf") format("truetype");
+    font-weight: 400;
+    font-style: Bold;
+}
+
+@font-face {
+    font-family: "spaceMonoItalic";
+    src: url("/spaceMono/SpaceMono-Italic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: Italic;
+}
+
+@font-face {
+    font-family: "spaceMonoBoldItralic";
+    src: url("/spaceMono/SpaceMono-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: BoldItalic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    color: var(--color-flash-white);
+}

@@ -1,0 +1,57 @@
+@import url("./Variables.css");
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    z-index: 10;
+    background-color: #ffffff05;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6px 120px;
+    gap: 40px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.navbar-links li {
+    color: var(--color-moon-white);
+    transition: 0.3s;
+    &:hover {
+        color: var(--color-sunset-orange);
+    }
+}
+
+.navbar-links p {
+    font-size: 20px;
+}
+
+.verticle-line {
+    height: 1.5rem;
+    width: 2px;
+    border-left: 2px solid var(--color-dark-carbon);
+}
+
+@media (max-width: 1200px) {
+    nav {
+        padding: 6px 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 6px 16px;
+    }
+}
