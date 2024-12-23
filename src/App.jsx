@@ -1,14 +1,13 @@
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./styles/App.css";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./webPages/Home.jsx";
 import IVariRevamp from "./webPages/IVariRevamp.jsx";
+import IVariHRMS from "./webPages/IVariHRMS.jsx";
+import StonePaper from "./webPages/StonePaper.jsx";
+import GetmyJobs from "./webPages/Getmyjobs.jsx";
+import IvariHRMS from "./webPages/IVariHRMS.jsx";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -48,6 +47,9 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/iVariRevamp" element={<IVariRevamp />} />
+                <Route path="/iVariHRMS" element={<IvariHRMS />} />
+                <Route path="/stonepaper" element={<StonePaper />} />
+                <Route path="/getmyjobs" element={<GetmyJobs />} />
             </Routes>
         </Router>
     );

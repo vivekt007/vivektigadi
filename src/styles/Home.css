@@ -1,17 +1,5 @@
 @import url("./Variables.css");
 
-:root {
-    --color-pure-black: #000000;
-    --color-pure-white: #ffffff;
-    --color-blackout: #070707;
-    --color-moon-white: #f8f8f8;
-    --color-light-carbon: #cdcdcd;
-    --color-medium-carbon: #878787;
-    --color-dark-carbon: #575757;
-    --color-sunset-orange: #fa4616;
-    --color-link: #47b7f8;
-}
-
 body {
     background-color: var(--color-blackout);
     color: var(--color-moon-white);
@@ -31,7 +19,10 @@ p {
 }
 
 .hero-section,
-.projects-section {
+.projects-section,
+.about-section,
+.experience-section,
+.contact-section {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -42,33 +33,41 @@ p {
     font-size: 48px;
 }
 
-.hero-row1,
-.hero-row2,
-.projects-row1,
-.projects-row2 {
-    display: flex;
-    gap: 12px;
-    padding: 8px 0;
-}
-
-.hero-row1 p,
-.projects-row1 p {
-    font-size: 16px;
-}
-
 .home-vl {
     height: 24px;
     width: 2px;
     border-left: 2px solid var(--color-sunset-orange);
 }
 
+.hero-row1,
+.hero-row2,
+.projects-row1,
+.projects-row2,
+.about-row1,
+.about-row2,
+.experience-row1,
+.contact-row1 {
+    display: flex;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.hero-row1 p,
+.projects-row1 p,
+.about-row1 p,
+.contact-row1 p {
+    font-size: 16px;
+}
+
 .hero-row2 p,
-.projects-row2 p {
+.projects-row2 p,
+.about-row2 p {
     color: var(--color-medium-carbon);
 }
 
 .hero-row2 span,
-.projects-row2 span {
+.projects-row2 span,
+.about-row2 span {
     color: var(--color-link);
 }
 
@@ -108,13 +107,6 @@ p {
     width: 24px;
 }
 
-/* .projects-container2 {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(auto-fill, 175px);
-    justify-content: flex-start;
-} */
-
 .projects-container2 {
     display: flex;
     gap: 40px;
@@ -126,13 +118,16 @@ p {
 .project-card {
     height: 175px;
     width: 175px;
-    border: 1px solid var(--color-moon-white);
+    border: 1px solid var(--color-dark-carbon);
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
+    opacity: 0.8;
+    overflow: hidden;
     transition: 0.3s;
     &:hover {
+        opacity: 1;
         background-color: #57575720;
         transform: translate(4px, -4px);
         box-shadow: -4px 4px var(--color-dark-carbon);
@@ -142,7 +137,149 @@ p {
 }
 
 .project-card img {
-    width: 150px;
+    width: 100%;
+}
+
+.about-row3 {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 16px;
+    width: 20%;
+    min-height: 250px;
+}
+
+.about-r3-col1,
+.about-r3-col2,
+.about-r3-col3,
+.about-r3-col4 {
+    border-top: 2px dashed var(--color-moon-white);
+    border-bottom: 2px dashed var(--color-moon-white);
+    border-left: 2px dashed var(--color-moon-white);
+}
+
+.about-r3-col5 {
+    background-image: url(/documents/Vivek.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px dashed var(--color-moon-white);
+}
+
+.skills-container h5 {
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 400;
+    letter-spacing: -0.6px;
+}
+
+.skills-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skills-container li {
+    color: var(--color-medium-carbon);
+    letter-spacing: -0.6px;
+    line-height: 100%;
+}
+
+.about-r3-col3 li {
+    transition: 0.3s;
+    &:hover {
+        color: var(--color-moon-white);
+    }
+}
+
+.work-exp {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.expDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0px 12px;
+}
+
+.expDesc-row1 {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.expDesc-row1 h5 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.expDesc-row1 a {
+    color: var(--color-link);
+}
+
+.expDesc-row1 p {
+    font-size: 12px;
+    color: var(--color-medium-carbon);
+}
+
+.expDesc-row2 p {
+    color: var(--color-medium-carbon);
+    font-size: 14px;
+}
+
+.contact-row2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form-row1 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-row2 input,
+.contact-row2 textarea {
+    background-color: #57575710;
+    border: none;
+    padding: 8px;
+    color: var(--color-light-carbon);
+    transition: 0.3s;
+    &:hover {
+        background-color: #57575740;
+    }
+}
+
+.contact-row2 button {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    width: fit-content;
+    background-color: transparent;
+    border: 1px solid var(--color-moon-white);
+    gap: 8px;
+    transition: 0.3s;
+    &:hover {
+        transform: translate(4px, -4px);
+        box-shadow: -4px 4px var(--color-dark-carbon);
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -158,6 +295,28 @@ p {
 
     .project-card {
         width: 100%;
-        height: 14rem;
+        height: 100%;
+    }
+
+    .skills-container {
+        width: 100%;
+    }
+
+    .about-r3-col1,
+    .about-r3-col2,
+    .about-r3-col3,
+    .about-r3-col4 {
+        border-top: 2px dashed var(--color-moon-white);
+        border-right: 2px dashed var(--color-moon-white);
+        border-left: 2px dashed var(--color-moon-white);
+        border-bottom: none;
+    }
+
+    .expDesc-row1 {
+        gap: 8px;
+    }
+
+    .expDesc-row1 > .verticle-line {
+        display: none;
     }
 }

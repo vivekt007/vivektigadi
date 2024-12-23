@@ -12,15 +12,19 @@ import cvIcon from "/icons/cv.svg";
 import instagramIcon from "/icons/instagram.svg";
 import linkedInIcon from "/icons/linkedIn.svg";
 import emailIcon from "/icons/email.svg";
-
-// logos
-import iVari from "/logo/iVariLogo.svg";
+import send from "/icons/send.svg";
 
 // background
-// import Logo3D from "../assets/BackgroundImg/iVariLogo3d.png";
+import iVariCover from "/designs/iVariRevamp/iVariCover.png";
+import iVariHRMSCover from "/designs/iVariHRMS/iVariHRMScover.png";
+import StonepaperCover from "/designs/Stonepaper/StonepaperCover.png";
+import GetmyjobsCover from "/designs/Getmyjobs/GetmyjobsCover.png";
+import CampusBuyCover from "/designs/Campusbuy/CampusBuyThumbnail.png";
+import CareerpulseappCover from "/designs/Careerpulseapp/Careerpulsethumbnail.png";
+import DesignAssignments from "/designs/Netclan/DesignAssignmentsCover.png";
 
 // components
-// import Footer from "../components/Footer.jsx";
+import Footer from "../components/Footer.jsx";
 
 function Home() {
     // Animations effect
@@ -32,13 +36,20 @@ function Home() {
 
     // handlers
 
-    const handleCareerNav = () => {
-        window.location.href =
-            "https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/";
-    };
-
     const handleiVariWebsite = () => {
         navigate("/iVariRevamp");
+    };
+
+    const handleiVariHRMS = () => {
+        navigate("/iVariHRMS");
+    };
+
+    const handleStonepaper = () => {
+        navigate("/stonepaper");
+    };
+
+    const handlegetmyjobs = () => {
+        navigate("/getmyjobs");
     };
 
     // contact handler
@@ -50,7 +61,7 @@ function Home() {
         setResult("Sending....");
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "3a3a44b7-7f8b-4de1-8495-5f579285dbb2");
+        formData.append("access_key", "310a6ec8-3b3d-4ce6-b334-8c7152ec6914");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -141,7 +152,7 @@ function Home() {
                     </li>
 
                     <li className="hero-link">
-                        <a href="#contact" rel="noopener noreferrer">
+                        <a href="#contactSection" rel="noopener noreferrer">
                             <img src={emailIcon} alt="Email" />
                         </a>
                     </li>
@@ -168,19 +179,19 @@ function Home() {
 
                 <div className="projects-container2">
                     <div className="project-card" onClick={handleiVariWebsite}>
-                        <img src={iVari} alt="iVari security systems1" />
+                        <img src={iVariCover} alt="iVari security systems" />
                     </div>
 
-                    <div className="project-card" onClick={handleiVariWebsite}>
-                        <img src={iVari} alt="iVari security systems1" />
+                    <div className="project-card" onClick={handleiVariHRMS}>
+                        <img src={iVariHRMSCover} alt="iVari HRMS cover" />
                     </div>
 
-                    <div className="project-card" onClick={handleiVariWebsite}>
-                        <img src={iVari} alt="iVari security systems1" />
+                    <div className="project-card" onClick={handleStonepaper}>
+                        <img src={StonepaperCover} alt="Stone paper cover" />
                     </div>
 
-                    <div className="project-card" onClick={handleiVariWebsite}>
-                        <img src={iVari} alt="iVari security systems1" />
+                    <div className="project-card" onClick={handlegetmyjobs}>
+                        <img src={GetmyjobsCover} alt="Getmyjobs cover" />
                     </div>
                 </div>
             </div>
@@ -204,31 +215,234 @@ function Home() {
                 </div>
 
                 <div className="projects-container2">
-                    <div className="project-card" onClick={handleiVariWebsite}>
-                        <img src={iVari} alt="iVari security systems1" />
+                    <a
+                        href="https://www.behance.net/gallery/193439937/Campus-Buy"
+                        target="_blank"
+                        className="project-card"
+                    >
+                        <img src={CampusBuyCover} alt="CampusBuy cover" />
+                    </a>
+
+                    <a
+                        href="https://www.behance.net/gallery/195561159/Career-pulse"
+                        target="_blank"
+                        className="project-card"
+                    >
+                        <img
+                            src={CareerpulseappCover}
+                            alt="Career plus app cover"
+                        />
+                    </a>
+
+                    <a
+                        href="https://www.behance.net/vivektigadi"
+                        target="_blank"
+                        className="project-card"
+                    >
+                        <img
+                            src={DesignAssignments}
+                            alt="Design assignment cover"
+                        />
+                    </a>
+                </div>
+            </div>
+
+            <div className="about-section" id="about">
+                <div className="about-container1">
+                    <div className="about-row1">
+                        <div className="home-vl"></div>
+                        <p>About</p>
                     </div>
 
-                    <div className="project-card" onClick={handleiVariWebsite}>
-                        <img src={iVari} alt="iVari security systems1" />
+                    <div className="about-row2">
+                        <div className="home-vl-hidden"></div>
+                        <p>
+                            Hi, I’m Vivek Tigadi, a UI/UX
+                            <span> Designer </span>and Front-end
+                            <span> Developer </span>passionate about crafting
+                            digital experiences that blend aesthetics and
+                            functionality. With expertise in tools like
+                            <span> Figma</span>,<span> React.js</span>,
+                            <span> Spline</span>,<span> Framer </span> and
+                            <span> Vercel</span>. I bring ideas to life through
+                            intuitive designs and seamless development.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="about-row3">
+                    <div className="about-r3-col1 skills-container">
+                        <h5>Design skills</h5>
+                        <ul>
+                            <li>Design thinking</li>
+                            <li>User interface</li>
+                            <li>User experience</li>
+                            <li>User research</li>
+                            <li>Prototyping</li>
+                            <li>Wireframing</li>
+                            <li>Responsive design</li>
+                        </ul>
+                    </div>
+                    <div className="about-r3-col2 skills-container">
+                        <h5>Development skills</h5>
+                        <ul>
+                            <li>React.js</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div className="about-r3-col3 skills-container">
+                        <h5>Tools</h5>
+                        <ul>
+                            <li className="figma">
+                                <a href="https://www.figma.com/">Figma</a>
+                            </li>
+                            <li className="vercel">
+                                <a href="https://vercel.com/">Vercel</a>
+                            </li>
+                            <li className="spline">
+                                <a href="https://spline.design/">Spline</a>
+                            </li>
+                            <li className="framer">
+                                <a href="https://www.framer.com/">Framer</a>
+                            </li>
+                            <li className="photopea">
+                                <a href="https://www.photopea.com/">Photopea</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="about-r3-col4 skills-container">
+                        <h5>Others</h5>
+                        <ul>
+                            <li>Team work</li>
+                            <li>Documentation</li>
+                            <li>Brand identity</li>
+                            <li>Mockups</li>
+                            <li>Humor</li>
+                            <li>Photography</li>
+                        </ul>
+                    </div>
+                    <div className="about-r3-col5 skills-container"></div>
+                </div>
+            </div>
+
+            <div className="experience-section" id="experienceSection">
+                <div className="experience-container1">
+                    <div className="experience-row1">
+                        <div className="home-vl"></div>
+                        <p>Experience</p>
+                    </div>
+                </div>
+
+                <div className="work-exp">
+                    <div className="experience-container2 expDesc">
+                        <div className="expDesc-row1">
+                            <h5>JR. UI UX DESIGNER</h5>
+                            <div className="verticle-line"></div>
+
+                            <a href="https://www.ivari.in" target="_blank">
+                                iVari Security Systems Pvt Ltd
+                            </a>
+                            <p>(May 2024 - Present)</p>
+                        </div>
+                        <div className="expDesc-row2">
+                            <p>
+                                Designed intuitive and user-centric digital
+                                experiences for web and mobile platforms. Led
+                                the redesign of the company website and internal
+                                systems, ensuring alignment with the brand’s
+                                identity. Collaborated with cross-functional
+                                teams to deliver responsive and functional
+                                designs using tools like Figma and developed
+                                them.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="project-card" onClick={handleiVariWebsite}>
-                        <img src={iVari} alt="iVari security systems1" />
+                    <div className="experience-container3 expDesc">
+                        <div className="expDesc-row1">
+                            <h5>DESIGNE TRAINEE</h5>
+                            <div className="verticle-line"></div>
+
+                            <a href="https://www.ivari.in" target="_blank">
+                                Designerrs academy
+                            </a>
+                            <p>(Oct 2023 - Mar 2024)</p>
+                        </div>
+                        <div className="expDesc-row2">
+                            <p>
+                                Contributed to the development of dynamic and
+                                interactive web interfaces using HTML, CSS,
+                                JavaScript, and Bootstrap. Worked on enhancing
+                                the usability and design of client-facing
+                                applications, focusing on creating responsive
+                                and accessible user experiences.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="project-card" onClick={handleiVariWebsite}>
-                        <img src={iVari} alt="iVari security systems1" />
+                    <div className="experience-container4 expDesc">
+                        <div className="expDesc-row1">
+                            <h5>FRONT-END DEVELOPER</h5>
+                            <div className="verticle-line"></div>
+
+                            <a href="https://www.ivari.in" target="_blank">
+                                Hamdan InfoCom
+                            </a>
+                            <p>(Oct 2022 - Nov 2022)</p>
+                        </div>
+                        <div className="expDesc-row2">
+                            <p>
+                                Designed intuitive and user-centric digital
+                                experiences for web and mobile platforms. Led
+                                the redesign of the company website and internal
+                                systems, ensuring alignment with the brand’s
+                                identity. Collaborated with cross-functional
+                                teams to deliver responsive and functional
+                                designs using tools like Figma and developed
+                                them.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="about" id="about">
-                <h2>About</h2>
+            <div className="contact-section" id="contactSection">
+                <div className="contact-row1">
+                    <div className="home-vl"></div>
+                    <p>Contact</p>
+                </div>
+
+                <form className="contact-row2" onSubmit={onSubmit}>
+                    <div className="contact-form-row1">
+                        <input
+                            type="text"
+                            placeholder="NAME"
+                            required
+                            name="name"
+                        />
+                        <input
+                            type="email"
+                            placeholder="EMAIL"
+                            required
+                            name="email"
+                        />
+                        <textarea
+                            placeholder="MESSAGE"
+                            required
+                            name="message"
+                        ></textarea>
+                    </div>
+                    <button type="submit" className="contact-cta">
+                        <img src={send} alt="->" />
+                        SEND
+                    </button>
+                </form>
             </div>
 
-            <div className="contact" id="contact">
-                <h2>contact</h2>
-            </div>
+            <Footer />
         </div>
     );
 }

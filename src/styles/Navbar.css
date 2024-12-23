@@ -44,6 +44,37 @@ nav {
     border-left: 2px solid var(--color-dark-carbon);
 }
 
+/* Footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px dashed var(--color-dark-carbon);
+    padding: 16px 0px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.footer-col1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-col1 a {
+    font-size: 16px;
+    transition: 0.3s;
+    &:hover {
+        color: var(--color-sunset-orange);
+    }
+}
+
+.footer-col2 p {
+    font-size: 16px;
+}
+
 @media (max-width: 1200px) {
     nav {
         padding: 6px 80px;
@@ -53,5 +84,18 @@ nav {
 @media (max-width: 768px) {
     nav {
         padding: 6px 16px;
+        gap: 24px;
+    }
+
+    .logo img {
+        width: 32px;
+    }
+
+    .navbar-links {
+        gap: 24px;
+    }
+
+    .navbar-links p {
+        font-size: 16px;
     }
 }
