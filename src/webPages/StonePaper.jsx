@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/project.css";
+import "../styles/Project.css";
 
 // js files
 import { observeElements } from "../Javascript/animation.js";
