@@ -21,12 +21,16 @@ import Footer from "../components/Footer.jsx";
 function IvariRevamp() {
     // Animations effect
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
         observeElements();
     }, []);
 
     const navigate = useNavigate();
 
-    const [result, setResult] = React.useState("");
+    const [result, setResult] = useState("");
 
     return (
         <div className="project blur">

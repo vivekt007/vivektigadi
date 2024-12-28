@@ -13,6 +13,11 @@ import stonePaperStyleGuide from "/designs/Stonepaper/StyleGuide.png";
 import Footer from "../components/Footer.jsx";
 
 function StonePaper() {
+    // Scroll to top on component load
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     // Animations effect
     useEffect(() => {
         observeElements();
@@ -20,27 +25,14 @@ function StonePaper() {
 
     const navigate = useNavigate();
 
-    const [result, setResult] = React.useState("");
+    const [result, setResult] = useState("");
 
     return (
         <div className="project blur">
             <div className="project-title" id="heroSection">
                 <div className="project-name">
                     <h1>StonePaper</h1>
-                    {/* <a href="https://www.ivari.in" target="_blank">
-                        <img src={linkIcon} alt="link" />
-                        <span>website</span>
-                    </a> */}
                 </div>
-                {/* <a
-                    href="/documents/iVariRevampDoc.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="document-link"
-                >
-                    <img src={fileIcon} alt="File" />
-                    <span>DOCUMENTATION</span>
-                </a> */}
             </div>
 
             <div className="project-row">
@@ -95,14 +87,6 @@ function StonePaper() {
                 </div>
                 <div className="project-row-col">
                     <img src={stonePaperStyleGuide} alt="Image 1" />
-                    {/* <a
-                        className="web-link"
-                        href="https://www.ivari.in"
-                        target="_blank"
-                    >
-                        <span>Website</span>
-                        <img src={linkIcon} alt="link" />
-                    </a> */}
                 </div>
             </div>
 

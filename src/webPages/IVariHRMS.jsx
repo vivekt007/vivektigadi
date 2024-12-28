@@ -25,32 +25,23 @@ import Footer from "../components/Footer.jsx";
 function IvariHRMS() {
     // Animations effect
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
         observeElements();
     }, []);
 
     const navigate = useNavigate();
 
-    const [result, setResult] = React.useState("");
+    const [result, setResult] = useState("");
 
     return (
         <div className="project blur">
             <div className="project-title" id="heroSection">
                 <div className="project-name">
                     <h1>iVari HRMS</h1>
-                    {/* <a href="https://www.ivari.in" target="_blank">
-                        <img src={linkIcon} alt="link" />
-                        <span>website</span>
-                    </a> */}
                 </div>
-                {/* <a
-                    href="/documents/iVariRevampDoc.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="document-link"
-                >
-                    <img src={fileIcon} alt="File" />
-                    <span>DOCUMENTATION</span>
-                </a> */}
             </div>
 
             <div className="project-row">
@@ -140,15 +131,6 @@ function IvariHRMS() {
                     <img src={iVariHRMSDashboardSales} alt="Image 10" />
                     <img src={iVariHRMSDashboardSalary} alt="Image 11" />
                     <img src={iVariHRMSDashboardOutReach} alt="Image 11" />
-
-                    {/* <a
-                        className="web-link"
-                        href="https://www.ivari.in"
-                        target="_blank"
-                    >
-                        <span>Website</span>
-                        <img src={linkIcon} alt="link" />
-                    </a> */}
                 </div>
             </div>
 

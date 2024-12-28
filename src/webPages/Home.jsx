@@ -29,6 +29,10 @@ import Footer from "../components/Footer.jsx";
 function Home() {
     // Animations effect
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
         observeElements();
     }, []);
 
@@ -54,7 +58,7 @@ function Home() {
 
     // contact handler
 
-    const [result, setResult] = React.useState("");
+    const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -297,19 +301,41 @@ function Home() {
                         <h5>Tools</h5>
                         <ul>
                             <li className="figma">
-                                <a href="https://www.figma.com/">Figma</a>
+                                <a
+                                    target="_blank"
+                                    href="https://www.figma.com/"
+                                >
+                                    Figma
+                                </a>
                             </li>
                             <li className="vercel">
-                                <a href="https://vercel.com/">Vercel</a>
+                                <a target="_blank" href="https://vercel.com/">
+                                    Vercel
+                                </a>
                             </li>
                             <li className="spline">
-                                <a href="https://spline.design/">Spline</a>
+                                <a
+                                    target="_blank"
+                                    href="https://spline.design/"
+                                >
+                                    Spline
+                                </a>
                             </li>
                             <li className="framer">
-                                <a href="https://www.framer.com/">Framer</a>
+                                <a
+                                    target="_blank"
+                                    href="https://www.framer.com/"
+                                >
+                                    Framer
+                                </a>
                             </li>
                             <li className="photopea">
-                                <a href="https://www.photopea.com/">Photopea</a>
+                                <a
+                                    target="_blank"
+                                    href="https://www.photopea.com/"
+                                >
+                                    Photopea
+                                </a>
                             </li>
                         </ul>
                     </div>

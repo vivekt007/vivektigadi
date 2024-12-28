@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import GithubLastUpdate from "../components/GithubLastUpdate";
 
 // Css
 import "../styles/Navbar.css";
@@ -14,12 +15,22 @@ function Footer() {
 
     return (
         <footer>
+            <GithubLastUpdate />
             <div className="footer-col1">
-                <a href="https://github.com/vivekt007">Github</a>
+                <a target="_blank" href="https://github.com/vivekt007">
+                    Github
+                </a>
                 <div className="verticle-line"></div>
-                <a href="https://www.instagram.com/vicky__67t/">Instagram</a>
+                <a target="_blank" href="https://www.instagram.com/vicky__67t/">
+                    Instagram
+                </a>
                 <div className="verticle-line"></div>
-                <a href="https://www.linkedin.com/in/vivek-tigadi/">LinkedIn</a>
+                <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/vivek-tigadi/"
+                >
+                    LinkedIn
+                </a>
             </div>
             <div className="footer-col2">
                 <p>&copy; Vivek Tigadi {currentYear}. ALL RIGHTS RESERVED.</p>
