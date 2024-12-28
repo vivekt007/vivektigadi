@@ -436,12 +436,23 @@ function Home() {
             </div>
 
             <div className="contact-section" id="contactSection">
-                <div className="contact-row1">
-                    <div className="home-vl"></div>
-                    <p>Contact</p>
+                <div className="projects-container1">
+                    <div className="contact-row1">
+                        <div className="home-vl"></div>
+                        <p>Contact</p>
+                    </div>
+
+                    <div className="contact-row2">
+                        <div className="home-vl-hidden"></div>
+                        <p>
+                            Have a question, opportunity, or just want to say
+                            hello? Fill out the form below, and I'll get back to
+                            you as soon as possible!
+                        </p>
+                    </div>
                 </div>
 
-                <form className="contact-row2" onSubmit={onSubmit}>
+                <form className="contact-row3" onSubmit={onSubmit}>
                     <div className="contact-form-row1">
                         <input
                             type="text"

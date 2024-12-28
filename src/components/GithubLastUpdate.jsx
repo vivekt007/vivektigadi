@@ -11,9 +11,14 @@ function GithubLastUpdate() {
             .then((response) => response.json())
             .then((data) => {
                 if (data.pushed_at) {
-                    const formattedDate = new Date(
-                        data.pushed_at
-                    ).toLocaleDateString();
+                    const date = new Date(data.pushed_at);
+                    const formattedDate = `${String(date.getDate()).padStart(
+                        2,
+                        "0"
+                    )}/${String(date.getMonth() + 1).padStart(
+                        2,
+                        "0"
+                    )}/${date.getFullYear()}`;
                     setLastUpdate(formattedDate);
                 }
             })
@@ -24,11 +29,7 @@ function GithubLastUpdate() {
 
     return (
         <div className="github-last-update">
-            {lastUpdate ? (
-                <p>Last updated : {lastUpdate}</p>
-            ) : (
-                <p>Loading...</p>
-            )}
+            {lastUpdate ? <p>Last updated: {lastUpdate}</p> : <p>Loading...</p>}
         </div>
     );
 }
