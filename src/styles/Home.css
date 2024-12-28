@@ -67,6 +67,7 @@ p {
     color: var(--color-medium-carbon);
 }
 
+.hero-row1 i,
 .hero-row2 span,
 .projects-row2 span,
 .about-row2 span {

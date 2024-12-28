@@ -99,7 +99,8 @@ function Home() {
                         <div className="home-vl"></div>
                         <p>
                             A designer obsessed with creating digital
-                            experiences.
+                            experiences
+                            <i> and I can code too!</i>
                         </p>
                     </div>
 
