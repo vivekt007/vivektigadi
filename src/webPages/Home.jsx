@@ -25,8 +25,12 @@ import DesignAssignments from "/designs/Netclan/DesignAssignmentsCover.png";
 
 // components
 import Footer from "../components/Footer.jsx";
+import TextStack from "../components/Text.jsx";
+import ImageSlider from "../components/ImageSlider.jsx";
 
 function Home() {
+    // images array
+
     // Animations effect
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -92,7 +96,7 @@ function Home() {
     return (
         <div className="home blur">
             <div className="hero-section" id="heroSection">
-                <h1>VIVEK TIGADI</h1>
+                <TextStack />
 
                 <div className="hero-container1">
                     <div className="hero-row1">
@@ -183,19 +187,35 @@ function Home() {
                 </div>
 
                 <div className="projects-container2">
-                    <div className="project-card" onClick={handleiVariWebsite}>
+                    <div
+                        data-tooltip="iVari Security Systems website revamp"
+                        className="project-card"
+                        onClick={handleiVariWebsite}
+                    >
                         <img src={iVariCover} alt="iVari security systems" />
                     </div>
 
-                    <div className="project-card" onClick={handleiVariHRMS}>
+                    <div
+                        data-tooltip="iVari hrms portal design & development"
+                        className="project-card"
+                        onClick={handleiVariHRMS}
+                    >
                         <img src={iVariHRMSCover} alt="iVari HRMS cover" />
                     </div>
 
-                    <div className="project-card" onClick={handleStonepaper}>
+                    <div
+                        data-tooltip="StonePaper website design & development"
+                        className="project-card"
+                        onClick={handleStonepaper}
+                    >
                         <img src={StonepaperCover} alt="Stone paper cover" />
                     </div>
 
-                    <div className="project-card" onClick={handlegetmyjobs}>
+                    <div
+                        data-tooltip="Getmyjobs.in website design & development"
+                        className="project-card"
+                        onClick={handlegetmyjobs}
+                    >
                         <img src={GetmyjobsCover} alt="Getmyjobs cover" />
                     </div>
                 </div>
@@ -224,6 +244,7 @@ function Home() {
                         href="https://www.behance.net/gallery/193439937/Campus-Buy"
                         target="_blank"
                         className="project-card"
+                        data-tooltip="Product reselling app (Case study)"
                     >
                         <img src={CampusBuyCover} alt="CampusBuy cover" />
                     </a>
@@ -232,6 +253,7 @@ function Home() {
                         href="https://www.behance.net/gallery/195561159/Career-pulse"
                         target="_blank"
                         className="project-card"
+                        data-tooltip="Interview Preparation app (Design assigmnet)"
                     >
                         <img
                             src={CareerpulseappCover}
@@ -243,6 +265,7 @@ function Home() {
                         href="https://www.behance.net/vivektigadi"
                         target="_blank"
                         className="project-card"
+                        data-tooltip="Check out my Behance"
                     >
                         <img
                             src={DesignAssignments}
@@ -351,7 +374,9 @@ function Home() {
                             <li>Photography</li>
                         </ul>
                     </div>
-                    <div className="about-r3-col5 skills-container"></div>
+                    <div className="about-r3-col5 skills-container">
+                        <ImageSlider interval={3000} />
+                    </div>
                 </div>
             </div>
 

@@ -110,6 +110,22 @@ p {
     width: 24px;
 }
 
+[data-tooltip]:hover::after,
+[data-tooltip]:focus::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    content: attr(data-tooltip);
+    background-color: #00000040;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    padding: 0.5em 0.25em;
+    font-size: 12px;
+    text-align: center;
+    /* mix-blend-mode: difference; */
+}
+
 .projects-container2 {
     display: flex;
     gap: 40px;
@@ -170,10 +186,11 @@ p {
 }
 
 .about-r3-col5 {
-    background-image: url(/documents/Vivek.jpg);
+    /* background-image: url(/documents/Vivek.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
+    padding: 0;
     border: 2px dashed var(--color-moon-white);
 }
 
