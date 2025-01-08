@@ -5,9 +5,13 @@
   "type": "module",
   "description": "Vivek Tigadi portfolio",
   "main": "eslint.config.js",
+  "homepage": ".",
   "keywords": [
     "Portfolio",
     "Vivek Tigadi",
+    "vivektigadi",
+    "Vivek",
+    "Tigadi",
     "UI UX Designer",
     "User interface",
     "User experience",
