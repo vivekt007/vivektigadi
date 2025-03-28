@@ -19,22 +19,6 @@ p {
   position: relative;
 }
 
-/* .backgroundImg {
-    background: url("/myImages/Bg2.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100dvh;
-    z-index: -1;
-    pointer-events: none;
-    backdrop-filter: blur(12px);
-    opacity: 0.1;
-} */
-
 .hero-section,
 .projects-section,
 .about-section,

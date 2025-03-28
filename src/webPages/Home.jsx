@@ -22,7 +22,6 @@ import GetmyjobsCover from "/designs/Getmyjobs/GetmyjobsCover.png";
 import CampusBuyCover from "/designs/Campusbuy/CampusBuyThumbnail.png";
 import CareerpulseappCover from "/designs/Careerpulseapp/Careerpulsethumbnail.png";
 import DesignAssignments from "/designs/Netclan/DesignAssignmentsCover.png";
-import backgroundGif from "/myImages/Background.gif";
 
 // components
 import Footer from "../components/Footer.jsx";
@@ -96,10 +95,6 @@ function Home() {
 
   return (
     <div className="home blur">
-      <div className="backgroundImg">
-        {/* <img src={backgroundGif} alt="Background image" />; */}
-      </div>
-
       <div className="hero-section" id="heroSection">
         <TextStack />
 
